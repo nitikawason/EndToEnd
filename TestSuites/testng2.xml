@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<groups>
+<run>
+<include name="Regression"/>
+</run>
+</groups>
+
+
+
+<parameter name="UserName" value="nitika@test.com"/>
+<parameter name="Password" value="Test@12345"/>
+
+
+<test thread-count="5" name="Place an Order">
+
+ <classes>
+      <class name="Framework.EndtoEndEcommerce.Login"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="EndtoEnd">
+
+ <classes>
+      <class name="Framework.EndtoEndEcommerce.LoginOther"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
